@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stories</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+
+<a href="#"><div id="simple-menu" href="#sidr">
+	<div class="white_div">
+	</div>
+	<div class="transparent_div">
+	</div>
+	<div class="white_div">
+	</div>
+	<div class="transparent_div">
+	</div>
+	<div class="white_div">
+	</div>
+</div></a>
+
+<div id="sidr">
+	<p><a href="#">Home</a></p> <br />
+	<p><a href="#">About</a></p> <br />
+	<p><a href="#">Contact</a></p>
+</div>
+
+
+<%= yield %>
+
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+<script>
+$(document).ready(function() {
+  $('#simple-menu').sidr();
+});
+</script>
+
+</body>
+</html>
